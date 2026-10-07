@@ -35,17 +35,30 @@ def set_background(image_file):
         f"""
         <style>
 
+        /* Full page background */
         .stApp {{
             background-image:
                 linear-gradient(
-                    rgba(7, 20, 38, 0.60),
-                    rgba(7, 20, 38, 0.60)
+                    rgba(7, 20, 38, 0.55),
+                    rgba(7, 20, 38, 0.55)
                 ),
-                url("data:image/jpg;base64,{encoded_image}");
+                url("data:image/jpeg;base64,{encoded_image}");
 
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
+        }}
+
+        /* Remove top Streamlit header */
+        header[data-testid="stHeader"] {{
+            background: transparent;
+        }}
+
+        /* Remove extra top spacing */
+        .block-container {{
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }}
 
         </style>
