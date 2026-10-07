@@ -473,7 +473,7 @@ if predict_button:
     with col1:
 
         st.info(
-            f"Distance\n\n{distance:.1f} km"
+            f"Distance: \n\n{distance:.1f} km"
         )
 
 
@@ -482,17 +482,17 @@ if predict_button:
 
         if traffic == "low":
             st.success(
-                f"Traffic\n\n{traffic.title()}"
+                f"Traffic: \n\n{traffic.title()}"
             )
 
         elif traffic == "medium":
             st.warning(
-                f"Traffic\n\n{traffic.title()}"
+                f"Traffic: \n\n{traffic.title()}"
             )
 
         else:
             st.error(
-                f"Traffic\n\n{traffic.title()}"
+                f"Traffic: \n\n{traffic.title()}"
             )
 
 
@@ -500,7 +500,7 @@ if predict_button:
     with col3:
 
         st.warning(
-            f"Weather\n\n{weather.title()}"
+            f"Weather: \n\n{weather.title()}"
         )
 
 
@@ -508,7 +508,7 @@ if predict_button:
     with col4:
 
         st.info(
-            f"Vehicle\n\n"
+            f"Vehicle: \n\n"
             f"{type_of_vehicle.replace('_', ' ').title()}"
         )
 
@@ -517,6 +517,6 @@ if predict_button:
     with col5:
 
         st.success(
-            f"Order Type\n\n"
+            f"Order Type: \n\n"
             f"{type_of_order.title()}"
         )
